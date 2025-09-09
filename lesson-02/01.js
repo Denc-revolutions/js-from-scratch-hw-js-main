@@ -18,9 +18,6 @@ let isAccess = false
 // your code
 
 while(!isAccess) {
-    if(isAdmin === true || isVerifiedUser === true && hasSpecialPermission === true || hasTemporaryPass === true ) {
+    isAccess = (isAdmin || isVerifiedUser && hasSpecialPermission || hasTemporaryPass) 
         isAccess = true
-    } else {
-        isAccess = false
-    }
 }
