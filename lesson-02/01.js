@@ -17,7 +17,13 @@ let isAccess = false
 
 // your code
 
-while(!isAccess) {
-    isAccess = (isAdmin || isVerifiedUser && hasSpecialPermission || hasTemporaryPass) 
+while (!isAccess) {
+    if (isAccess = (isAdmin === false || isVerifiedUser === true && hasSpecialPermission === true || hasTemporaryPass === false),
+        isAccess = (isAdmin === true || isVerifiedUser === false && hasSpecialPermission === false || hasTemporaryPass === true),
+        isAccess = (isAdmin === false || isVerifiedUser === true && hasSpecialPermission === false || hasTemporaryPass === true),
+        isAccess = (isAdmin === true || isVerifiedUser === false && hasSpecialPermission === true || hasTemporaryPass === false)) {
         isAccess = true
+    } else {
+        isAccess = true
+    }
 }
