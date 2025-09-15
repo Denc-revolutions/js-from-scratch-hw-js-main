@@ -17,16 +17,23 @@ let isAccess = false
 
 // your code
 
-while (!isAccess) {
-    if (
-        ((isAdmin === false || isVerifiedUser === true) && (hasSpecialPermission === true || hasTemporaryPass === false)) ||
-        ((isAdmin === true || isVerifiedUser === false) && (hasSpecialPermission === false || hasTemporaryPass === true)) ||
-        ((isAdmin === false || isVerifiedUser === true) && (hasSpecialPermission === false || hasTemporaryPass === true)) ||
-        ((isAdmin === true || isVerifiedUser === false) && (hasSpecialPermission === true || hasTemporaryPass === false))
-    ) {
-        isAccess = true
-    } else {
-        isAccess = false
-        break
-    }
+// if (
+//     ((isAdmin === false || isVerifiedUser === true) && (hasSpecialPermission === true || hasTemporaryPass === false)) ||
+//     ((isAdmin === true || isVerifiedUser === false) && (hasSpecialPermission === false || hasTemporaryPass === true)) ||
+//     ((isAdmin === false || isVerifiedUser === true) && (hasSpecialPermission === false || hasTemporaryPass === true)) ||
+//     ((isAdmin === true || isVerifiedUser === false) && (hasSpecialPermission === true || hasTemporaryPass === false))
+// ) {
+//     isAccess = true
+// } else {
+//     isAccess = false
+// }
+
+if (
+    isAdmin || 
+    (isVerifiedUser && hasSpecialPermission) || 
+    hasTemporaryPass
+) {
+    isAccess = true
+} else {
+    isAccess = false
 }
