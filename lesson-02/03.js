@@ -8,20 +8,20 @@ const score = 70 // тестовое значение, можно изменят
 let grade
 // your code
 
-switch (score) {
-    case (value >= 0 && value <= 49):
+switch (true) {
+    case (score >= 0 && score <= 49):
         grade = 'F'
         break
-    case (value >= 50 && value <= 69):
+    case (score >= 50 && score <= 69):
         grade = 'D'
         break
-    case (value >= 70 && value <= 79):
+    case (score >= 70 && score <= 79):
         grade = 'C'
         break
-    case (value >= 80 && value <= 89):
+    case (score >= 80 && score <= 89):
         grade = 'B'
         break
-    case (value >= 90 && value <= 100):
+    case (score >= 90 && score <= 100):
         grade = 'A'
         break
 }
