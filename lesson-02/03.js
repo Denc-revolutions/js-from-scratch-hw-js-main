@@ -9,19 +9,19 @@ let grade
 // your code
 
 switch (score) {
-    case 0 >= 49:
+    case (value >= 0 && value <= 49):
         grade = 'F'
         break
-    case 50 >= 69:
+    case (value >= 50 && value <= 69):
         grade = 'D'
         break
-    case 70 >= 79:
+    case (value >= 70 && value <= 79):
         grade = 'C'
         break
-    case 80 >= 89:
+    case (value >= 80 && value <= 89):
         grade = 'B'
         break
-    case 90 >= 100:
+    case (value >= 90 && value <= 100):
         grade = 'A'
         break
 }
