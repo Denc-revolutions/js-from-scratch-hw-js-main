@@ -16,6 +16,5 @@
 */
 
 function findUniqueElements(array) {
-    let newArray = []
-    for(let i = 0; i < array.lenght; i++)
+   
 }
