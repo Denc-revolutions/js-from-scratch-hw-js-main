@@ -23,7 +23,7 @@ const oddNumbers = filter(numbers, (element, index) => {
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
-function myFilter(array, callback) {
+function filter(array, callback) {
   const newArray = []
   for (let elem of array) {
       if (callback(elem)) {
@@ -35,12 +35,12 @@ function myFilter(array, callback) {
 
 const words = ["cat", "apple", "door", "hi", "cup", "javascript"]
 
-const filter = myFilter(words, (element, index) => {
-  return element.length >= 3
+const myFilter = filter(words, (element, index) => {
+  return element.length > 3
 })
 
 
-console.log(filter);
+console.log(myFilter);
 
 
 
