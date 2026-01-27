@@ -1,9 +1,9 @@
 /*
-Напишите свою версию метода `filter`.
+Напишите свою версию метода `filter`. +
 Ваша задача — создать функцию `filter`, которая принимает два параметра:
 
-- `array` (массив, над которым выполняется операция),
-- `callback` (функция, которая вызывается для каждого элемента массива).
+- `array` (массив, над которым выполняется операция), +
+- `callback` (функция, которая вызывается для каждого элемента массива). 
 
 Функция `callback` должна принимать два параметра:
 
@@ -23,4 +23,24 @@ const oddNumbers = filter(numbers, (element, index) => {
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
-const filter = () => {}
+function myFilter(array, callback) {
+  const newArray = []
+  for (let elem of array) {
+      if (callback(elem)) {
+      newArray.push(elem)
+    }
+  }
+  return newArray
+}
+
+const words = ["cat", "apple", "door", "hi", "cup", "javascript"]
+
+const filter = myFilter(words, (element, index) => {
+  return element.length <= 3
+})
+
+
+console.log(filter);
+
+
+
