@@ -36,7 +36,7 @@ function myFilter(array, callback) {
 const words = ["cat", "apple", "door", "hi", "cup", "javascript"]
 
 const filter = myFilter(words, (element, index) => {
-  return element.length <= 3
+  return element.length >= 3
 })
 
 
