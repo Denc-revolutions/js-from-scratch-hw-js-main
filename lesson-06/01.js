@@ -44,12 +44,12 @@ function filter(array, callback) {
 }
 
 
-
+const parametr = (element, index) =>  element.length > 3
 
 
 const words = ["cat", "apple", "door", "hi", "cup", "javascript"]
 
-const myFilter = filter(words, (element, index) =>  element.length > 3)
+const myFilter = filter(words, parametr)
 
 
 console.log(myFilter);

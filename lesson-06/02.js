@@ -24,9 +24,98 @@ const doubledNumbers = map(numbers, (element, index) => {
 console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
 */
 
+// function map(array, callback) {
+//   let newArray = [];
+//   for (let i = 0; i < array.length; i++) {
+//     let result = callback(array[i], i)
+
+//     newArray.push(result)
+//   }
+
+//   return newArray
+// }
+
+// const numbers = [2, 5, 6, 17];
+
+// const myMap = numbers.map(number => {
+//   switch (number) {
+//     case 2:
+//       return { name: 'artkey' };
+//     case 5:
+//       return { name: 'hell' };
+//     case 6:
+//       return { name: 'viacha' };
+//     default:
+//       return { name: "хз" }
+//   }
+// })
+
+// console.log(myMap);
+
+// const maps = map(numbers, (number, index) => {
+//   switch (number) {
+//     case 2:
+//       return { name: 'artkey' };
+//     case 5:
+//       return { name: 'hell' };
+//     case 6:
+//       return { name: 'viacha' };
+//     default:
+//       return { name: "хз" }
+//   }
+// })
+
+
+// console.log(maps);
 
 
 
-const map = () => {}
+
+const elem = ['123', 'qaz', 'cvb', '456']
+
+function map(array, callback) {
+  let nextArray = [];
+  console.log('start');
+  
+  for (let i = 0; i < array.length; i++) {
+    let resultat = callback(array[i], i); // возвращает измененые элемент за один проход цикла 
+    nextArray.push(resultat) 
+    console.log('midl');
+  }
+  console.log('fin');
+  return nextArray
+  }
+
+
+const pam = map(elem, (str, index) => {
+  if (index === 2) {
+    return str.toUpperCase()
+  } else {
+    return str + " - " + index
+  }
+}) 
+
+
+console.log(pam);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
